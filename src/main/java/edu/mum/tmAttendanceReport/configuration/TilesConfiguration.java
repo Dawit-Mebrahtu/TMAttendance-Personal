@@ -1,4 +1,4 @@
-package edu.mum.tmAttendanceReport;
+package edu.mum.tmAttendanceReport.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;
