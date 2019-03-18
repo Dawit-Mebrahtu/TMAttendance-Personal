@@ -2,7 +2,7 @@ package edu.mum.tmAttendanceReport.entity;
 
 import java.util.Date;
 
-public class Student {
+public class Sample {
 	
 	private Long Id;
 	private Date date;

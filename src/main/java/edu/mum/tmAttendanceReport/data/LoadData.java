@@ -10,14 +10,14 @@ import java.text.SimpleDateFormat;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import edu.mum.tmAttendanceReport.entity.Student;
+import edu.mum.tmAttendanceReport.entity.Sample;
 
 import java.util.List;
 //import java.util.StringTokenizer;
 
 public class LoadData {
 	
-	public static List<Student> load() {
+	public static List<Sample> load() {
 		
 		Stream<String> data = null;
 		Path path = Paths.get("data/rc_data.txt");
@@ -27,18 +27,18 @@ public class LoadData {
 			e.printStackTrace();
 		}
 		
-	    List<Student> list = parseData(data);
+	    List<Sample> list = parseData(data);
 	    return list; 
 	}
 
 	@SuppressWarnings("deprecation")
-	public static List<Student> parseData(Stream<String> list){
+	public static List<Sample> parseData(Stream<String> list){
 		
-		List<Student> students = list.map(line -> {
+		List<Sample> students = list.map(line -> {
 			//StringTokenizer tokens = new StringTokenizer(line, ",");
 			String[] tokens = line.split(",");
 			final DateFormat format = new SimpleDateFormat("MM/dd/yy");
-			Student student = new Student();
+			Sample student = new Sample();
 			 
 			student.setId(Long.parseLong(tokens[0]));
 			try {

@@ -6,7 +6,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import edu.mum.tmAttendanceReport.data.LoadData;
-import edu.mum.tmAttendanceReport.entity.Student;
+import edu.mum.tmAttendanceReport.entity.Sample;
 
 @SpringBootApplication
 public class TmAttendanceReportApplication implements CommandLineRunner {
@@ -18,7 +18,7 @@ public class TmAttendanceReportApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 			Long seconds = System.currentTimeMillis();
-			List<Student> listOfStudent = LoadData.load();
+			List<Sample> listOfStudent = LoadData.load();
 			System.out.println(System.currentTimeMillis() - seconds);
 			System.out.println(listOfStudent.get(0));
 			
