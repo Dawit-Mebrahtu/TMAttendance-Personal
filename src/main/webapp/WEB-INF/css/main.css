@@ -1,0 +1,14 @@
+.nav {
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+/* .navbar-default {
+    color: #FFFFFF;
+    background-color:#000000;
+} */
+
+.navbar-default{
+    background-color:red;
+    border-color: green;
+}
