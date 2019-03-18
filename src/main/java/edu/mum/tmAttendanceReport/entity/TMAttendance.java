@@ -21,10 +21,14 @@ public class TMAttendance implements Serializable{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
+//These are commented to know how to use composite keys 
+//	private Student student;
+//	
+//	private DateInfo dateInfo;
 	
-	private Student student;
+//	private Place place;
 	
-	private DateInfo dateInfo;
+//	private TimeInfo timeInfo;
 	
 	public Long getId() {
 		return id;
@@ -33,43 +37,37 @@ public class TMAttendance implements Serializable{
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-	public TimeInfo getTimeInfo() {
-		return timeInfo;
-	}
-
-	public void setTimeInfo(TimeInfo timeInfo) {
-		this.timeInfo = timeInfo;
-	}
-
-	public Place getPlace() {
-		return place;
-	}
-
-	public void setPlace(Place place) {
-		this.place = place;
-	}
-
-	private TimeInfo timeInfo;
+//
+//	public TimeInfo getTimeInfo() {
+//		return timeInfo;
+//	}
+//
+//	public void setTimeInfo(TimeInfo timeInfo) {
+//		this.timeInfo = timeInfo;
+//	}
+//
+//	public Place getPlace() {
+//		return place;
+//	}
+//
+//	public void setPlace(Place place) {
+//		this.place = place;
+//	}
 	
-	private Place place;
-
-	public Student getStudent() {
-		return student;
-	}
-
-	public void setStudent(Student student) {
-		this.student = student;
-	}
-
-	public DateInfo getDateInfo() {
-		return dateInfo;
-	}
-
-	public void setDateInfo(DateInfo dateInfo) {
-		this.dateInfo = dateInfo;
-	}
-
-	
+//	public Student getStudent() {
+//		return student;
+//	}
+//
+//	public void setStudent(Student student) {
+//		this.student = student;
+//	}
+//
+//	public DateInfo getDateInfo() {
+//		return dateInfo;
+//	}
+//
+//	public void setDateInfo(DateInfo dateInfo) {
+//		this.dateInfo = dateInfo;
+//	}	
 	
 }

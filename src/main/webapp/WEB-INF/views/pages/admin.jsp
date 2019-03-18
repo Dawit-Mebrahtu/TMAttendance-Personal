@@ -1,16 +1,19 @@
 
 <body>
-	<h2>Welcome Admin</h2>
+	<h1>Administrator Panel</h1>
 
-	<form class="md-form">
+	<form class="md-form" action="" enctype="multipart/form-data">
 		<div class="file-field">
 			<a class="btn-floating peach-gradient mt-0 float-left"> <i
-				class="fas fa-paperclip" aria-hidden="true"></i> <input type="file">
+				class="fas fa-paperclip" aria-hidden="true"></i> 
+				<input type="file" id="file-upload">
 			</a>
 			<div class="file-path-wrapper">
-				<input class="file-path validate" type="text"
-					placeholder="Upload your file">
+				<p id="buttons">
+					<input id="submit" type="submit" tabindex="5" value="Upload File">
+				</p>
 			</div>
 		</div>
+
 	</form>
 </body>
