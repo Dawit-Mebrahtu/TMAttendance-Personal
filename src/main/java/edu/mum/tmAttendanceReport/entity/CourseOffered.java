@@ -3,10 +3,11 @@ package edu.mum.tmAttendanceReport.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,69 +19,44 @@ public class CourseOffered implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+
 	
-	//These are commented to know how to use composite keys 	
-//	private Course course;
-//	
-//	private Block block;
-//	
-//	private Faculty faculty;
-//	
-//	
-//	private List<Student> students;
+	//	creates a composite key using Course and Block
+	@EmbeddedId
+	private CourseOfferedIdentity courseOfferedIdentity;	
 
+	@OneToOne
+	@JoinColumn(name="faculty_id")
+	private Faculty faculty;
+	
+	@OneToMany
+	private List<Student> students;
 
-	public Long getId() {
-		return id;
+	public CourseOfferedIdentity getCourseOfferedIdentity() {
+		return courseOfferedIdentity;
 	}
 
-
-	public void setId(Long id) {
-		this.id = id;
+	public void setCourseOfferedIdentity(CourseOfferedIdentity courseOfferedIdentity) {
+		this.courseOfferedIdentity = courseOfferedIdentity;
 	}
 
+	public Faculty getFaculty() {
+		return faculty;
+	}
 
-//	public Course getCourse() {
-//		return course;
-//	}
-//
-//
-//	public void setCourse(Course course) {
-//		this.course = course;
-//	}
-//
-//
-//	public Block getBlock() {
-//		return block;
-//	}
-//
-//
-//	public void setBlock(Block block) {
-//		this.block = block;
-//	}
-//
-//
-//	public Faculty getFaculty() {
-//		return faculty;
-//	}
-//
-//
-//	public void setFaculty(Faculty faculty) {
-//		this.faculty = faculty;
-//	}
-//
-//
-//	public List<Student> getStudents() {
-//		return students;
-//	}
-//
-//
-//	public void setStudents(List<Student> students) {
-//		this.students = students;
-//	}
+	public void setFaculty(Faculty faculty) {
+		this.faculty = faculty;
+	}
+
+	public List<Student> getStudents() {
+		return students;
+	}
+
+	public void setStudents(List<Student> students) {
+		this.students = students;
+	}
+
+	
 	
 	
 }

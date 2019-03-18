@@ -43,11 +43,12 @@ public class LoginController {
 		return modelAndView;
 	}
 	
-	@RequestMapping(value = {"/success" }, method = RequestMethod.GET)
-	public ModelAndView successfulLogin() {
+	@RequestMapping(value = {"/home" }, method = RequestMethod.GET)
+	public ModelAndView successfulLogin(Principal user) {
 		
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("success");
+		modelAndView.addObject("currentUser", user.getName());
+		modelAndView.setViewName("home");
 		return modelAndView;
 	}
 //
@@ -84,8 +85,7 @@ public class LoginController {
 	// for 403 access denied page
 	@RequestMapping(value = "/access-denied", method = RequestMethod.GET)
 	public ModelAndView accesssDenied(Principal user) {
-		System.out.println("INSIDE ACCESS DENIED  HANDLER");
-		
+	
 		ModelAndView model = new ModelAndView();
 		if (user != null) {
 			model.addObject("msg", "Hi " + user.getName() + ", you do not have permission to access this page!");

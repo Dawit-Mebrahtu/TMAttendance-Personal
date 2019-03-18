@@ -7,6 +7,6 @@
 <title>Home</title>
 </head>
 <body>
-    <h2>Welcome to Spring MVC Tiles</h2>
+    <h2>Welcome to Spring MVC Tiles ${currentUser} </h2>
 </body>
 </html>

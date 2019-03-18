@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +21,7 @@
 </head>
 <body>
 	<div id="body-container">
+	
 		<!-- Begin header -->
 		<div id="header">
 			<!-- navBar menu -->
@@ -37,18 +39,22 @@
 										data-toggle="dropdown" href="#">TM Report<span
 											class="caret"></span></a>
 										<ul class="dropdown-menu">
+										<security:authorize access="hasRole('ADMIN')">
 											<li><a href="#">Block</a></li>
 											<li><a href="#">Entry</a></li>
+										</security:authorize>
 											<li><a href="#">Attendance</a></li>
 											<li><a href="#">Checks</a></li>
 											<li><a href="#">Retreats</a></li>
 										</ul></li>
-									<li><a href="#">File Upload</a></li>
+									<security:authorize access="hasRole('ADMIN')">
+										<li><a href="#">File Upload</a></li>
+									</security:authorize>
 									<li class="dropdown"><a class="dropdown-toggle"
 										data-toggle="dropdown" href="#">Profile<span class="caret"></span></a>
 										<ul class="dropdown-menu">
-											<li><a href="#">Username</a></li>
-											<li><a href="#">Logout</a></li>
+											<li><a href="#">${currentUser}</a></li>
+											<li><a href="/logout">Logout</a></li>
 										</ul></li>
 								</ul>
 							</div>
