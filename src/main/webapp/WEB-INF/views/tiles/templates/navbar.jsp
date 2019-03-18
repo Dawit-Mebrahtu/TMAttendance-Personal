@@ -1,6 +1,6 @@
 
 
-<nav class="navbar navbar-expand-lg navbar-light text-white bg-dark" style="width: 100%; text-align: justify;">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" style="width: 100%; text-align: justify;">
 	<a class="navbar-brand" href="#">TM Attendance</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"

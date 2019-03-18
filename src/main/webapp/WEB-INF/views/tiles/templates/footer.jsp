@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4">
+<footer class="footer">
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3 text-white bg-dark">© 2018 Copyright:
