@@ -10,6 +10,6 @@ public class HomeController {
 
 	@GetMapping(value= {"/"})
 	public String showPage(){
-		return "login";
+		return "admin";
 	}
 }

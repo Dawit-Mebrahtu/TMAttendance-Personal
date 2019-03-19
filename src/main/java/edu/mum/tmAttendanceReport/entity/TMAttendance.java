@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,8 +21,12 @@ public class TMAttendance implements Serializable{
 	@EmbeddedId
 	private TMAttendanceIdentity tmAttendanceIdentity;
 	
+	@OneToOne
+	@JoinColumn(name="place_id")
 	private Place place;
 	
+	@OneToOne
+	@JoinColumn(name="timeInfo_id")
 	private TimeInfo timeInfo;
 	
 	

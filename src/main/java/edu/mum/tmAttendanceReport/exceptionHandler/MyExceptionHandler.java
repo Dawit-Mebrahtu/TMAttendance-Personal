@@ -13,7 +13,7 @@ public class MyExceptionHandler {
 	public ModelAndView handleError(HttpServletRequest req, MyException exception) {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("message", exception.getMessage());
-		mav.setViewName("imageNotFound");
+		mav.setViewName("fileNotFound");
 		return mav;
 	}
 }

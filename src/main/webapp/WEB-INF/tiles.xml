@@ -7,10 +7,7 @@
    <definition name="template-def"
        template="/WEB-INF/views/tiles/layouts/layout.jsp">  
        <put-attribute name="title" value="" />  
-       <!-- <put-attribute name="header" value="/WEB-INF/views/tiles/templates/header.jsp" />  
-       <put-attribute name="menu" value="/WEB-INF/views/tiles/templates/navbar.jsp" />   -->
        <put-attribute name="body" value="" />  
-       <!-- <put-attribute name="footer" value="/WEB-INF/views/tiles/templates/footer.jsp" />   -->
    </definition>  
   
    <!-- Main Page -->
@@ -27,8 +24,19 @@
        
    <!-- Admin Page -->
    <definition name="admin" extends="template-def">  
-       <put-attribute name="title" value="Admin Panel" />  
-       <put-attribute name="body" value="/WEB-INF/views/pages/admin.jsp" />  
+       <put-attribute name="title" value="Admin" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/uploadForm.jsp" />  
    </definition>  
   
+   <!-- fileNotFound Page -->
+   <definition name="fileNotFound" extends="template-def">  
+       <put-attribute name="title" value="Upload Error" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/fileNotFound.jsp" />  
+   </definition>  
+   
+    <!-- upload File -->
+   <definition name="uploadResult" extends="template-def">  
+       <put-attribute name="title" value="Upload Success" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/uploadResult.jsp" />  
+   </definition>  
 </tiles-definitions>

@@ -1,7 +1,7 @@
 -- Authentication role types
-INSERT INTO `role` VALUES (1,'ADMIN');
-INSERT INTO `role` VALUES (2,'FACULTY');
-INSERT INTO `role` VALUES (3,'STUDENT');
+INSERT INTO `role` VALUES (1,'ROLE_ADMIN');
+INSERT INTO `role` VALUES (2,'ROLE_FACULTY');
+INSERT INTO `role` VALUES (3,'ROLE_STUDENT');
 
 
 -- Authentication credentials

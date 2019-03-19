@@ -75,7 +75,9 @@ public class LoginController {
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		System.out.println("PRINTING AUTH OBJECT: " + auth);
 		if (auth != null) {
+			System.out.println("clearing session");
 			new SecurityContextLogoutHandler().logout(request, response, auth);
 		}
 		return "redirect:/login?logout";// You can redirect wherever you want, but generally it's a good practice to
