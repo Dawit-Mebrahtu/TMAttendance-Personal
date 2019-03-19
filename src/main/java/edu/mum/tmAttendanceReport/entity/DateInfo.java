@@ -3,6 +3,7 @@ package edu.mum.tmAttendanceReport.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +12,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="dateInfo")
+@Table(name="date_info")
 public class DateInfo implements Serializable{
 
 	/**
@@ -23,7 +24,7 @@ public class DateInfo implements Serializable{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	
+	@Column(name="date_record")
 	private Date date;
 
 
