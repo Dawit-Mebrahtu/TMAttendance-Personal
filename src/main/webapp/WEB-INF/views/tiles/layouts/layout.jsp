@@ -39,7 +39,7 @@
 										data-toggle="dropdown" href="#">TM Report<span
 											class="caret"></span></a>
 										<ul class="dropdown-menu">
-										<security:authorize access="hasRole('ADMIN')">
+										<security:authorize access="hasAnyRole('ADMIN', 'FACULTY')">
 											<li><a href="#">Block</a></li>
 											<li><a href="#">Entry</a></li>
 										</security:authorize>
@@ -51,11 +51,12 @@
 										<li><a href="#">File Upload</a></li>
 									</security:authorize>
 									<li class="dropdown"><a class="dropdown-toggle"
-										data-toggle="dropdown" href="#">Profile<span class="caret"></span></a>
+										data-toggle="dropdown" href="#" id="profile">Profile<span class="caret"></span></a>
 										<ul class="dropdown-menu">
 											<li><a href="#">${currentUser}</a></li>
 											<li><a href="/logout">Logout</a></li>
-										</ul></li>
+										</ul>
+									</li>
 								</ul>
 							</div>
 						</div>
