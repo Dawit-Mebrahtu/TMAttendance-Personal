@@ -38,5 +38,13 @@
    <definition name="uploadResult" extends="template-def">  
        <put-attribute name="title" value="Upload Success" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/uploadResult.jsp" />  
-   </definition>  
+   </definition> 
+   
+   <!-- BLockForm File -->
+   <definition name="blockForm" extends="template-def">  
+       <put-attribute name="title" value="Block Form" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/blockForm.jsp" />  
+   </definition> 
+   
+    
 </tiles-definitions>
