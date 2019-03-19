@@ -41,10 +41,17 @@
 										data-toggle="dropdown" href="#">TM Report<span
 											class="caret"></span></a>
 										<ul class="dropdown-menu">
+
 											<security:authorize access="hasAnyRole('ADMIN', 'FACULTY')">
 												<li><a href="#">Block</a></li>
 												<li><a href="#">Entry</a></li>
 											</security:authorize>
+
+										<security:authorize access="hasAnyRole('ADMIN', 'FACULTY')">
+											<li><a href="#">Block</a></li>
+											<li><a href="#">Entry</a></li>
+										</security:authorize>
+
 											<li><a href="#">Attendance</a></li>
 											<li><a href="#">Checks</a></li>
 											<li><a href="#">Retreats</a></li>
@@ -53,12 +60,14 @@
 										<li><a href="#">File Upload</a></li>
 									</security:authorize>
 									<li class="dropdown"><a class="dropdown-toggle"
+
 										data-toggle="dropdown" href="#" id="profile">Profile<span
 											class="caret"></span></a>
 										<ul class="dropdown-menu">
 											<li><a href="#">${currentUser}</a></li>
 											<li><a href="/logout">Logout</a></li>
 										</ul>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -98,7 +107,6 @@
 			</footer>
 		</div>
 		<!-- End Footer -->
-
 
 	</div>
 </body>
