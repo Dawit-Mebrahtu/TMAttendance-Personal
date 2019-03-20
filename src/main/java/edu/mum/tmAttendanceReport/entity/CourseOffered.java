@@ -55,8 +55,5 @@ public class CourseOffered implements Serializable{
 	public void setStudents(List<Student> students) {
 		this.students = students;
 	}
-
-	
-	
 	
 }

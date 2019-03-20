@@ -1,59 +1,46 @@
 package edu.mum.tmAttendanceReport.controller;
 
-import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+
+import edu.mum.tmAttendanceReport.dto.FileUploadInfo;
 import edu.mum.tmAttendanceReport.exceptionHandler.MyException;
 
 @Controller
 public class AdminController {
 
-//	@GetMapping(value = "/upload")
-//	public String uploadForm(Model model) {
-//		FileUploadForm myUploadForm = new MyUploadForm();
-//		model.addAttribute("myUploadForm", myUploadForm);
-//
-//		return "admin";
-//	}
-//
-//	@PostMapping(value = "/upload")
-//	public String uploadFile() {
-//
-//		MultipartFile employeeImage = employee.getEmployeeImage();
-//		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-//
-//		if (employeeImage != null && !employeeImage.isEmpty()) {
-//			try {
-//				employeeImage.transferTo(new File(rootDirectory + "/images/" + employee.getId() + ".png"));
-//			} catch (Exception e) {
-//				throw new MyException(
-//						"Employee Image unable to be saved successfully !" + employeeImage.getOriginalFilename());
-//			}
-//		}
-//		return "";
-//	}
+	public static final String uploadingDir = System.getProperty("user.dir")+ "/uploads" ;
 
-//	// GET: Show upload form page.
-//	@RequestMapping(value = "/uploadOneFile", method = RequestMethod.GET)
-//	public String uploadOneFileHandler(Model model) {
-//
-//		MyUploadForm myUploadForm = new MyUploadForm();
-//		model.addAttribute("myUploadForm", myUploadForm);
-//
-//		return "uploadOneFile";
-//	}
-//
-//	// POST: Do Upload
-//	@RequestMapping(value = "/uploadOneFile", method = RequestMethod.POST)
-//	public String uploadOneFileHandlerPOST(HttpServletRequest request, //
-//			Model model, //
-//			@ModelAttribute("myUploadForm") MyUploadForm myUploadForm) {
-//
-//		return this.doUpload(request, model, myUploadForm);
-//
-//	}
+	// GET: Show upload form page.
+	@RequestMapping(value = "/upload")
+	public String uploadForm(@ModelAttribute("fileUploadInfo") FileUploadInfo fileUploadInfo, Model model) {
+//		FileUploadInfo fileInfo = new FileUploadInfo();
+//		model.addAttribute("fileUploadInfo", fileInfo);
+		return "uploadForm";
+	}
 
+	// POST: Do Upload
+	@PostMapping(value = "/upload")
+	public String uploadFile(Model model,
+			@RequestParam("file") MultipartFile file){
+
+		Path fileNameAndPath = Paths.get(uploadingDir, file.getOriginalFilename());
+        	try {
+				Files.write(fileNameAndPath, file.getBytes());
+				return "uploadResult";
+			} catch (IOException e) {
+				e.printStackTrace();
+				return "fileNotFound";
+			}
+	}
 }
