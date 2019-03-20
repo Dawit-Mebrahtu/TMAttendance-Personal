@@ -78,10 +78,11 @@ INSERT INTO `place`(id, name) VALUES(3, 'Ladies Palace');
 
 
 -- Students TM checking record
-INSERT INTO `tmcheck`(student_id, number_of_checks) VALUES(987073, 2);
+--INSERT INTO `tmcheck`(id, student_id, number_of_checks) VALUES(1, 987073, 2);
+
 
 -- Students Retreat record
-INSERT INTO `retreat`(student_id, number_of_retreats) VALUES(987073, 1);
+--INSERT INTO `retreat`(id, student_id, number_of_retreats) VALUES(1, 987073, 1);
 
 
 
