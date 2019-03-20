@@ -46,5 +46,11 @@
        <put-attribute name="body" value="/WEB-INF/views/pages/blockForm.jsp" />  
    </definition> 
    
+   <!-- BLockForm File -->
+   <definition name="StudentListForm" extends="template-def">  
+       <put-attribute name="title" value="Block Form" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/block.jsp" />  
+   </definition> 
+   
     
 </tiles-definitions>

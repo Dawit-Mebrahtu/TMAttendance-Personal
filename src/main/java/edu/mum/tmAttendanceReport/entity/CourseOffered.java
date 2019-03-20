@@ -55,5 +55,12 @@ public class CourseOffered implements Serializable{
 	public void setStudents(List<Student> students) {
 		this.students = students;
 	}
+
+	@Override
+	public String toString() {
+		return "CourseOffered [courseOfferedIdentity=" + courseOfferedIdentity + ", faculty=" + faculty + ", students="
+				+ students + "]";
+	}
+	
 	
 }

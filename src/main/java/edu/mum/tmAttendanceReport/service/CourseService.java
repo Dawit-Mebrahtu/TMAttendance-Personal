@@ -6,4 +6,5 @@ import edu.mum.tmAttendanceReport.entity.Course;
 
 public interface CourseService {
 	public List<Course> findAll();
+	public Course findById(String id);
 }
