@@ -31,6 +31,8 @@ public class Block implements Serializable{
 	
 	private String period;
 	
+	private String  description;
+	
 	public Long getId() {
 		return id;
 	}
@@ -61,6 +63,15 @@ public class Block implements Serializable{
 
 	public void setPeriod(String period) {
 		this.period = period;
+	}
+	
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	@Override

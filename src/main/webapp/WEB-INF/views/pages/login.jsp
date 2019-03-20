@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Loing</title>
+  <title>Login</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,6 +37,9 @@
                     <c:if test="${param.error}">
 						<p style="font-size: 20; color: #FF1C19;">Invalid Email or Password</p>
 					</c:if>
+					<c:if test="${param.logout != null}">
+						<p class="alert alert-success">You have been logged out successfully.</p>
+					</c:if>
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control form-control-lg rounded-0" name = "email" placeholder="Email">
@@ -46,7 +49,7 @@
                 </div>
                 <div>
                     <label class="custom-control custom-checkbox">
-                      <input type="checkbox" class="checkbox" name="remember">
+                      <input type="checkbox" class="checkbox" name="remember-me">
                       <span class="custom-control-indicator"></span>
                       <span class="custom-control-description small text-dark">Remember me</span>
                     </label>
