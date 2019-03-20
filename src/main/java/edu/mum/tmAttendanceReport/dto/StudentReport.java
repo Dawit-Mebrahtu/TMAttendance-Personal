@@ -12,6 +12,7 @@ public class StudentReport {
 	
 	private String creditScore;
 
+	
 	public String getId() {
 		return id;
 	}
@@ -52,4 +53,10 @@ public class StudentReport {
 		this.creditScore = creditScore;
 	}
 	
+	@Override
+	public String toString() {
+		return "StudentReport [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", percentage="
+				+ percentage + ", creditScore=" + creditScore + "]";
+	}
+
 }

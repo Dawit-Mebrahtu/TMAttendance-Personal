@@ -9,29 +9,29 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="student")
+@Table(name = "student")
 public class Student implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	private Long studentId;
-	
+
 	private String firstName;
-	
+
 	private String lastName;
-	
+
 	private String barCode;
-	
+
 	@OneToOne
-	@JoinColumn(name="entry_id")
+	@JoinColumn(name = "entry_id")
 	private Entry entry;
-	
+
 	@OneToOne
-	@JoinColumn(name="user_id")
+	@JoinColumn(name = "user_id")
 	private User user;
 
 	public Long getStudentId() {
@@ -124,8 +124,11 @@ public class Student implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", firstName=" + firstName + ", lastName=" + lastName + ", barCode="
+				+ barCode + ", entry=" + entry + ", user=" + user + "]";
+	}
 
 }

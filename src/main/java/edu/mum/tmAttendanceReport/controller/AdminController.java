@@ -17,6 +17,7 @@ import edu.mum.tmAttendanceReport.dto.FileUploadInfo;
 import edu.mum.tmAttendanceReport.exceptionHandler.MyException;
 
 @Controller
+@RequestMapping(value="/admin")
 public class AdminController {
 
 	public static final String uploadingDir = System.getProperty("user.dir")+ "/uploads" ;

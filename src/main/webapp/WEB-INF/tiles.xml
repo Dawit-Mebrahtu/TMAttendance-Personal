@@ -47,8 +47,8 @@
    </definition> 
    
    <!-- BLockForm File -->
-   <definition name="StudentListForm" extends="template-def">  
-       <put-attribute name="title" value="Block Form" />  
+   <definition name="block" extends="template-def">  
+       <put-attribute name="title" value="Block Report" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/block.jsp" />  
    </definition> 
    

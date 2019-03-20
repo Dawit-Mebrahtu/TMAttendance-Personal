@@ -1,12 +1,11 @@
 package edu.mum.tmAttendanceReport.serviceImpl;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import edu.mum.tmAttendanceReport.entity.Student;
 import edu.mum.tmAttendanceReport.entity.TMAttendance;
 import edu.mum.tmAttendanceReport.repository.TMAttendanceRepository;
 import edu.mum.tmAttendanceReport.service.TMAttendanceService;
@@ -20,8 +19,8 @@ public class TMAttendanceServiceImpl implements TMAttendanceService{
 	
 	
 	@Override
-	public List<TMAttendance> findAttendanceByDates(Student student, Date startDate, Date endDate) {
-		return tmAttendanceRepository.findAttendanceByDates(student,startDate,endDate);
+	public List<TMAttendance> findAttendanceByDates(Long student,  Date startDate, Date endDate) {
+		return tmAttendanceRepository.findAttendanceByDates(student,startDate, endDate);
 	}
 
 }
