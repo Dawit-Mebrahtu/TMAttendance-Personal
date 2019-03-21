@@ -74,6 +74,14 @@ public class Block implements Serializable{
 		this.description = description;
 	}
 
+	
+	
+	@Override
+	public String toString() {
+		return "Block [id=" + id + ", startDate=" + startDate + ", endDate=" + endDate + ", period=" + period
+				+ ", description=" + description + "]";
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;

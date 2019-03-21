@@ -52,6 +52,11 @@ public class Entry implements Serializable{
 
 	public void setStartdate(DateInfo startdate) {
 		this.startdate = startdate;
+	}
+
+	@Override
+	public String toString() {
+		return "Entry [id=" + id + ", startPeriod=" + startPeriod + ", startdate=" + startdate + "]";
 	} 
 
 	

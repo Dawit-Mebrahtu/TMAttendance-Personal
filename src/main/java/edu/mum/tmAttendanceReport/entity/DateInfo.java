@@ -47,6 +47,13 @@ public class DateInfo implements Serializable{
 		this.date = date;
 	}
 
+	
+
+	@Override
+	public String toString() {
+		return "DateInfo [id=" + id + ", date=" + date + "]";
+	}
+
 
 	@Override
 	public int hashCode() {

@@ -1,5 +1,6 @@
 package edu.mum.tmAttendanceReport.serviceImpl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +23,10 @@ public class BlockServiceImpl implements BlockService {
 	@Override
 	public Block findById(Long id) {
 		return blockRepository.findById(id).get();
+	}
+
+	@Override
+	public List<Block> findByStartDateAfter(Date startDate) {
+		return blockRepository.findByStartDateAfter(startDate);
 	}
 }

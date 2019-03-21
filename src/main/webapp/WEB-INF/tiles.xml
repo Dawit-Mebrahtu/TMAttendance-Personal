@@ -64,10 +64,16 @@
        <put-attribute name="body" value="/WEB-INF/views/pages/addCheckForm.jsp" />  
    </definition>
    
-      <!-- Update Retreat Form -->
+   <!-- Update Retreat Form -->
    <definition name="updateCheck" extends="template-def">  
        <put-attribute name="title" value="Update Check Form" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/updateCheck.jsp" />  
+   </definition>
+   
+    <!-- Student TM Attendance Report Form -->
+   <definition name="studentReport" extends="template-def">  
+       <put-attribute name="title" value="TM Attendance Report" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/studentReport.jsp" />  
    </definition> 
    
    

@@ -52,7 +52,7 @@
 											<li><a href="#">Entry</a></li>
 										</security:authorize> --%>
 
-											<li><a href="#">Attendance</a></li>
+											<li><a href="/student/attendance">Attendance</a></li>
 											<li><a href="#">Checks</a></li>
 											<li><a href="#">Retreats</a></li>
 										</ul></li>
@@ -110,7 +110,7 @@
 		<!-- End  main body -->
 
 		<!-- Begin Footer -->
-		<div id="footer">
+		<div id="footer" >
 			<footer>
 				<div class="container">
 					<div class="ooter-copyright  py-3 text-white bg-dark">

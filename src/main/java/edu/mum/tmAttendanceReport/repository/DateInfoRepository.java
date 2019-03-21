@@ -7,11 +7,12 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import edu.mum.tmAttendanceReport.entity.Block;
+import edu.mum.tmAttendanceReport.entity.DateInfo;
 
 @Repository
-public interface BlockRepository extends CrudRepository<Block, Long>{
+public interface DateInfoRepository extends CrudRepository<DateInfo, Long>{
 
-	public List<Block> findByStartDateAfter(Date startDate);
+	public List<DateInfo> findByDateAfter(Date startDate);
 
 
 }
