@@ -15,5 +15,13 @@ public interface TMAttendanceRepository extends CrudRepository<TMAttendance, Lon
 	@Query(value = "SELECT t FROM TMAttendance t WHERE t.tmAttendanceIdentity.studentId.studentId=:student AND t.tmAttendanceIdentity.date.date BETWEEN :startDate AND :endDate")
 	public List<TMAttendance> findAttendanceByDates(@Param("student") Long student,
 			@Param("startDate") Date startDate, @Param("endDate") Date endDate);
+	
+	@Query(value = "SELECT t FROM TMAttendance t WHERE t.tmAttendanceIdentity.studentId.studentId=:student AND t.tmAttendanceIdentity.date.date >= :startDate")
+	public List<TMAttendance> findTotalAttendance(@Param("student") Long student,
+			@Param("startDate") Date startDate);
+
+	
+	@Query(value = "SELECT t FROM TMAttendance t WHERE t.tmAttendanceIdentity.studentId.studentId=:studentid AND t.tmAttendanceIdentity.date.date >= :date ")
+	public List<TMAttendance> findAttendanceById(Long studentid,Date date);
 
 }

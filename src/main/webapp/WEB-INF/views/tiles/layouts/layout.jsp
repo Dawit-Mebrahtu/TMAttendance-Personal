@@ -47,20 +47,35 @@
 												<li><a href="#">Entry</a></li>
 											</security:authorize>
 
-										<security:authorize access="hasAnyRole('ADMIN', 'FACULTY')">
+										<%-- <security:authorize access="hasAnyRole('ADMIN', 'FACULTY')">
 											<li><a href="#">Block</a></li>
 											<li><a href="#">Entry</a></li>
-										</security:authorize>
+										</security:authorize> --%>
 
-											<li><a href="#">Attendance</a></li>
+											<li><a href="/student/attendance">Attendance</a></li>
 											<li><a href="#">Checks</a></li>
 											<li><a href="#">Retreats</a></li>
 										</ul></li>
 									<security:authorize access="hasRole('ADMIN')">
 										<li><a href="#">File Upload</a></li>
+										<li class="dropdown"><a class="dropdown-toggle"
+											data-toggle="dropdown" href="#">Retreat<span
+												class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="/admin/retreat">Add</a></li>
+												<li><a href="/admin/retreat/update">Update</a></li>
+											</ul>
+										</li>
+										<li class="dropdown"><a class="dropdown-toggle"
+											data-toggle="dropdown" href="#">TM Checks<span
+												class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="/admin/check">Add</a></li>
+												<li><a href="/admin/check/update">Update</a></li>
+											</ul>
+										</li>
 									</security:authorize>
 									<li class="dropdown"><a class="dropdown-toggle"
-
 										data-toggle="dropdown" href="#" id="profile">Profile<span
 											class="caret"></span></a>
 										<ul class="dropdown-menu">
@@ -95,7 +110,7 @@
 		<!-- End  main body -->
 
 		<!-- Begin Footer -->
-		<div id="footer">
+		<div id="footer" >
 			<footer>
 				<div class="container">
 					<div class="ooter-copyright  py-3 text-white bg-dark">

@@ -25,7 +25,7 @@ public class LoginController {
 	@Autowired
 	private LoadDataService loadDataService;
 
-	@RequestMapping(value = {"/login" }, method = RequestMethod.GET)
+	@RequestMapping(value = {"/", "/login" }, method = RequestMethod.GET)
 	public ModelAndView login() {
 		loadDataService.loadData(); 
 		ModelAndView modelAndView = new ModelAndView();
@@ -44,14 +44,14 @@ public class LoginController {
 		return modelAndView;
 	}
 	
-	@RequestMapping(value = {"/home" }, method = RequestMethod.GET)
-	public ModelAndView successfulLogin(Principal user) {
-		
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("currentUser", user.getName());
-		modelAndView.setViewName("home");
-		return modelAndView;
-	}
+//	@RequestMapping(value = {"/home" }, method = RequestMethod.GET)
+//	public ModelAndView successfulLogin(Principal user) {
+//		
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.addObject("currentUser", user.getName());
+//		modelAndView.setViewName("home");
+//		return modelAndView;
+//	}
 //
 //	@RequestMapping(value = "/registration", method = RequestMethod.POST)
 //	public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
@@ -77,6 +77,7 @@ public class LoginController {
 	public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		System.out.println("PRINTING AUTH OBJECT: " + auth);
+		
 		if (auth != null) {
 			System.out.println("clearing session");
 			new SecurityContextLogoutHandler().logout(request, response, auth);
