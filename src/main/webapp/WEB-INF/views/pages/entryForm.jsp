@@ -1,13 +1,15 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Add Employee Form</title>
-<link rel="stylesheet" href="../../css/index.css">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
 </head>
 <body>
+
+
 	<header>
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
@@ -24,35 +26,24 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="container">
-					<h2>Choose:</h2>
-					<p>The form below contains two dropdown menus (select lists):</p>
+					<h2>Entry Report Select Form</h2>
+					<p></p>
 					<br> <br> <br>
 					<div class="form-group">
-						<form action="/Report/Block" method="post">
+						<form action="/Admin/Entry" method="post">
 							<div class="container">
 								<div class="container">
 									<div class="container">
-										Course: <select name="course" class="form-control">
-											<c:forEach items="${cList}" var="course">
-												<option value="${course.code}">${course.name}</option>
+										Select an Entry: <select name="entry" class="form-control">
+											<c:forEach items="${eList}" var="entry">
+												<option value="${entry.id}">${entry.startPeriod}</option>
 											</c:forEach>
 										</select>
 									</div>
 								</div>
 							</div>
 							<br> <br> <br>
-							<div class="container">
-								<div class="container">
-									<div class="container">
-										Block: <select name="block" class="form-control">
-											<c:forEach items="${bList}" var="block">
-												<option value="${block.id}">${block.description}</option>
-											</c:forEach>
-										</select>
-									</div>
-								</div>
-							</div>
-							<br> <br> <br>
+
 							<div class="container">
 								<div class="container">
 									<div class="container">
@@ -72,11 +63,6 @@
 			<!-- /.container-fluid -->
 		</nav>
 	</header>
+
 </body>
 </html>
-
-
-
-
-
-

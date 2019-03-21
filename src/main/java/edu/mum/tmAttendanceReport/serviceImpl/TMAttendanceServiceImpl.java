@@ -23,4 +23,12 @@ public class TMAttendanceServiceImpl implements TMAttendanceService{
 		return tmAttendanceRepository.findAttendanceByDates(student,startDate, endDate);
 	}
 
+
+
+	@Override
+	public List<TMAttendance> findAttendanceById(Long studentid,Date date) {
+		
+		return tmAttendanceRepository.findAttendanceById(studentid,date) ;
+	}
+
 }

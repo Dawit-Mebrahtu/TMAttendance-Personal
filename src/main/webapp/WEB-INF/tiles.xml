@@ -51,6 +51,18 @@
        <put-attribute name="title" value="Block Report" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/block.jsp" />  
    </definition> 
+   <!-- BLockForm File -->
+   <definition name="entryForm" extends="template-def">  
+       <put-attribute name="title" value="Block Report" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/entryForm.jsp" />  
+   </definition> 
+   
+   
+   <!-- BLockForm File -->
+   <definition name="entry" extends="template-def">  
+       <put-attribute name="title" value="Block Report" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/entry.jsp" />  
+   </definition> 
    
     
 </tiles-definitions>

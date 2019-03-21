@@ -21,7 +21,7 @@ import edu.mum.tmAttendanceReport.entity.TMAttendance;
 import edu.mum.tmAttendanceReport.service.BlockService;
 import edu.mum.tmAttendanceReport.service.CourseOfferedService;
 import edu.mum.tmAttendanceReport.service.CourseService;
-import edu.mum.tmAttendanceReport.service.StudentService;
+
 import edu.mum.tmAttendanceReport.service.TMAttendanceService;
 
 @Controller
@@ -36,8 +36,8 @@ public class BlockController {
 	@Autowired
 	private BlockService blockService;
 
-	@Autowired
-	private StudentService studentService;
+//	@Autowired
+//	private StudentService studentService;
 
 	@Autowired
 	private TMAttendanceService tmAttendanceService;
@@ -88,7 +88,7 @@ public class BlockController {
 //	}
 
 	public List<StudentReport> generateResult(List<Student> list, Block block) {
-		final DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+		//final DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 
 		java.sql.Date startDate = new java.sql.Date(block.getStartDate().getTime());
 		java.sql.Date endDate = new java.sql.Date(block.getEndDate().getTime());
