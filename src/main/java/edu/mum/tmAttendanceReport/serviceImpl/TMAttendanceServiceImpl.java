@@ -17,10 +17,15 @@ public class TMAttendanceServiceImpl implements TMAttendanceService{
 	private TMAttendanceRepository tmAttendanceRepository;
 	
 	
-	
 	@Override
 	public List<TMAttendance> findAttendanceByDates(Long student,  Date startDate, Date endDate) {
 		return tmAttendanceRepository.findAttendanceByDates(student,startDate, endDate);
 	}
+	
+	@Override
+	public TMAttendance save(TMAttendance tma) {
+		return tmAttendanceRepository.save(tma);
+	}
+
 
 }

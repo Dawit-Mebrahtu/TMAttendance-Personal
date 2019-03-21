@@ -30,9 +30,85 @@ INSERT INTO `faculty`(id, first_name, last_name, user_id) VALUES(2, 'Rujuan', 'X
 
 
 -- Date info (everydays date info)
-INSERT INTO `date_info`(id, date_record) VALUES(1, '2018-08-04');
-INSERT INTO `date_info`(id, date_record) VALUES(2, '2018-11-04');
-INSERT INTO `date_info`(id, date_record) VALUES(3, '2019-01-04');
+-- Date info (everydays date info)
+--  Date info 2016/11
+INSERT INTO `date_info`(id, date_record) VALUES(1, '2016-11-17');
+INSERT INTO `date_info`(id, date_record) VALUES(2, '2016-11-19');
+INSERT INTO `date_info`(id, date_record) VALUES(3, '2016-11-21');
+INSERT INTO `date_info`(id, date_record) VALUES(4, '2016-11-22');
+INSERT INTO `date_info`(id, date_record) VALUES(5, '2016-11-23');
+INSERT INTO `date_info`(id, date_record) VALUES(6, '2016-11-25');
+INSERT INTO `date_info`(id, date_record) VALUES(7, '2016-11-26');
+INSERT INTO `date_info`(id, date_record) VALUES(8, '2016-11-28');
+INSERT INTO `date_info`(id, date_record) VALUES(9, '2016-11-29');
+INSERT INTO `date_info`(id, date_record) VALUES(10, '2016-11-30');
+
+--  Date info 2016/12
+INSERT INTO `date_info`(id, date_record) VALUES(11, '2016-12-01');
+INSERT INTO `date_info`(id, date_record) VALUES(12, '2016-12-02');
+INSERT INTO `date_info`(id, date_record) VALUES(13, '2016-12-03');
+INSERT INTO `date_info`(id, date_record) VALUES(14, '2016-12-05');
+INSERT INTO `date_info`(id, date_record) VALUES(15, '2016-12-06');
+INSERT INTO `date_info`(id, date_record) VALUES(16, '2016-12-07');
+INSERT INTO `date_info`(id, date_record) VALUES(17, '2016-12-08');
+INSERT INTO `date_info`(id, date_record) VALUES(18, '2016-12-09');
+INSERT INTO `date_info`(id, date_record) VALUES(19, '2016-12-10');
+INSERT INTO `date_info`(id, date_record) VALUES(20, '2016-12-12');
+INSERT INTO `date_info`(id, date_record) VALUES(21, '2016-12-13');
+INSERT INTO `date_info`(id, date_record) VALUES(22, '2016-12-14');
+INSERT INTO `date_info`(id, date_record) VALUES(23, '2016-12-15');
+INSERT INTO `date_info`(id, date_record) VALUES(24, '2016-12-16');
+INSERT INTO `date_info`(id, date_record) VALUES(25, '2016-12-17');
+INSERT INTO `date_info`(id, date_record) VALUES(26, '2016-12-19');
+INSERT INTO `date_info`(id, date_record) VALUES(27, '2016-12-20');
+INSERT INTO `date_info`(id, date_record) VALUES(28, '2016-12-21');
+INSERT INTO `date_info`(id, date_record) VALUES(29, '2016-12-22');
+INSERT INTO `date_info`(id, date_record) VALUES(30, '2016-12-23');
+INSERT INTO `date_info`(id, date_record) VALUES(31, '2016-12-24');
+INSERT INTO `date_info`(id, date_record) VALUES(32, '2016-12-27');
+
+
+--  Date info 2017/01
+INSERT INTO `date_info`(id, date_record) VALUES(33, '2017-01-03');
+INSERT INTO `date_info`(id, date_record) VALUES(34, '2017-01-04');
+INSERT INTO `date_info`(id, date_record) VALUES(35, '2017-01-05');
+INSERT INTO `date_info`(id, date_record) VALUES(36, '2017-01-06');
+INSERT INTO `date_info`(id, date_record) VALUES(37, '2017-01-07');
+INSERT INTO `date_info`(id, date_record) VALUES(38, '2017-01-09');
+INSERT INTO `date_info`(id, date_record) VALUES(39, '2017-01-10');
+INSERT INTO `date_info`(id, date_record) VALUES(40, '2017-01-11');
+INSERT INTO `date_info`(id, date_record) VALUES(41, '2017-01-12');
+INSERT INTO `date_info`(id, date_record) VALUES(42, '2017-01-13');
+INSERT INTO `date_info`(id, date_record) VALUES(43, '2017-01-16');
+INSERT INTO `date_info`(id, date_record) VALUES(44, '2017-01-17');
+INSERT INTO `date_info`(id, date_record) VALUES(45, '2017-01-18');
+INSERT INTO `date_info`(id, date_record) VALUES(46, '2017-01-19');
+INSERT INTO `date_info`(id, date_record) VALUES(47, '2017-01-20');
+INSERT INTO `date_info`(id, date_record) VALUES(48, '2017-01-21');
+INSERT INTO `date_info`(id, date_record) VALUES(49, '2017-01-23');
+INSERT INTO `date_info`(id, date_record) VALUES(50, '2017-01-24');
+INSERT INTO `date_info`(id, date_record) VALUES(51, '2017-01-25');
+INSERT INTO `date_info`(id, date_record) VALUES(52, '2017-01-26');
+INSERT INTO `date_info`(id, date_record) VALUES(53, '2017-01-27');
+INSERT INTO `date_info`(id, date_record) VALUES(54, '2017-01-28');
+INSERT INTO `date_info`(id, date_record) VALUES(55, '2017-01-30');
+INSERT INTO `date_info`(id, date_record) VALUES(56, '2017-01-31');
+
+--  Date info 2017/02
+INSERT INTO `date_info`(id, date_record) VALUES(57, '2017-02-01');
+INSERT INTO `date_info`(id, date_record) VALUES(58, '2017-02-02');
+INSERT INTO `date_info`(id, date_record) VALUES(59, '2017-02-03');
+INSERT INTO `date_info`(id, date_record) VALUES(60, '2017-02-04');
+INSERT INTO `date_info`(id, date_record) VALUES(61, '2017-02-06');
+INSERT INTO `date_info`(id, date_record) VALUES(62, '2017-02-07');
+INSERT INTO `date_info`(id, date_record) VALUES(63, '2017-02-08');
+INSERT INTO `date_info`(id, date_record) VALUES(64, '2017-02-09');
+INSERT INTO `date_info`(id, date_record) VALUES(65, '2017-02-10');
+INSERT INTO `date_info`(id, date_record) VALUES(66, '2017-02-13');
+INSERT INTO `date_info`(id, date_record) VALUES(67, '2017-02-14');
+INSERT INTO `date_info`(id, date_record) VALUES(68, '2017-02-15');
+INSERT INTO `date_info`(id, date_record) VALUES(69, '2017-02-16');
+
 
 
 -- TM Attendance slots
@@ -72,7 +148,7 @@ INSERT INTO `course_offered`(block_id, course_id, faculty_id) VALUES(1, 'CS545',
 INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987073);
 
 -- TM attendance locations
-INSERT INTO `place`(id, name) VALUES(1, 'Dalby Hall');
+INSERT INTO `place`(id, name) VALUES(1, 'DB');
 INSERT INTO `place`(id, name) VALUES(2, 'Dome');
 INSERT INTO `place`(id, name) VALUES(3, 'Ladies Palace');
 
@@ -360,5 +436,5 @@ INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUE
 INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (987070, 'reubmkf', 'hjond', '6138', 3, );
 INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (987071, 'zuxjafi', 'rtlbs', '9927', 1, );
 INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (987072, 'hdplmjo', 'jbmqs', '6286', 3, );
-
+INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (987074, 'derfdrf', 'pjtvo', '7888', 2, );
 
