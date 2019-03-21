@@ -26,6 +26,7 @@ public class TMAttendanceServiceImpl implements TMAttendanceService{
 	@Override
 	public List<TMAttendance> findTotalAttendance(Long student, Date startDate) {
 		return tmAttendanceRepository.findTotalAttendance(student, startDate);
+	}
 
 
 	@Override
