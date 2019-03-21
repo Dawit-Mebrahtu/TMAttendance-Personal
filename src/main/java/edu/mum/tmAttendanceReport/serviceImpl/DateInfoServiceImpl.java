@@ -2,7 +2,6 @@ package edu.mum.tmAttendanceReport.serviceImpl;
 
 import java.util.Date;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,8 +13,13 @@ import edu.mum.tmAttendanceReport.service.DateInfoService;
 public class DateInfoServiceImpl implements DateInfoService {
 
 	@Autowired
-	DateInfoRepository dateInfoRepository;
+	private DateInfoRepository dateInfoRepository;
 	
+	@Override
+	public DateInfo getDateInfoByDate(Date date) {
+		return dateInfoRepository.getDateInfoByDate(date);
+	}
+
 	@Override
 	public List<DateInfo> findByDateAfter(Date startDate) {
 		return dateInfoRepository.findByDateAfter(startDate);

@@ -437,5 +437,5 @@ INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUE
 INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (987070, 'reubmkf', 'hjond', '6138', 3, );
 INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (987071, 'zuxjafi', 'rtlbs', '9927', 1, );
 INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (987072, 'hdplmjo', 'jbmqs', '6286', 3, );
-
+INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (987074, 'derfdrf', 'pjtvo', '7888', 2, );
 
