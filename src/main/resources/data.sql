@@ -118,14 +118,15 @@ INSERT INTO `time_info`(id, time_of_day) VALUES(3, 'PM');
 
 
 -- University addmission dates info
-INSERT INTO entry(id, start_Period, date_info_id) VALUES(1, 'August', 1);
-INSERT INTO entry(id, start_Period, date_info_id) VALUES(2, 'November', 2);
-INSERT INTO entry(id, start_Period, date_info_id) VALUES(3, 'January', 3);
+INSERT INTO entry(id, start_Period, date_info_id) VALUES(1, 'Nov 2016', 1);
+INSERT INTO entry(id, start_Period, date_info_id) VALUES(2, 'Jan 2017', 33);
+INSERT INTO entry(id, start_Period, date_info_id) VALUES(3, 'Feb 2017', 57);
 
 
 -- University block dates info
-INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(1, '2017-01-03', '2017-01-31', 24, 'January 2017');
-INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(2, '2017-02-01', '2017-02-16', 13, 'February 2017');
+INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(1, '2016-11-17', '2016-11-30', 10, 'Nov 2016');
+INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(2, '2017-01-03', '2017-01-31', 22, 'Jan 2017');
+INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(3, '2017-02-01', '2017-02-16', 10, 'Feb 2017');
 
 
 -- University course catalog 

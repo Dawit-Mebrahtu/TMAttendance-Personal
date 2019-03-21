@@ -12,4 +12,6 @@ public interface TMAttendanceService {
 
 	public List<TMAttendance> findAttendanceByDates(Long student, Date startDate, Date endDate);
 	public List<TMAttendance> findTotalAttendance( Long student, Date startDate);
+
+	public List<TMAttendance> findAttendanceById(Long studentid, Date date);
 }

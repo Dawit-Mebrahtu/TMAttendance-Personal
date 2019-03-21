@@ -7,4 +7,5 @@ import edu.mum.tmAttendanceReport.entity.DateInfo;
 
 public interface DateInfoService {
 	public List<DateInfo> findByDateAfter(Date startDate);
+	List<DateInfo> Daysgreaterthan(java.sql.Date startDate);
 }
