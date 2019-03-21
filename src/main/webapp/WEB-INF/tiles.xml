@@ -46,6 +46,31 @@
        <put-attribute name="body" value="/WEB-INF/views/pages/blockForm.jsp" />  
    </definition> 
    
+   <!-- Retreat Form -->
+   <definition name="addRetreatForm" extends="template-def">  
+       <put-attribute name="title" value="Retreat Form" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/addRetreatForm.jsp" />  
+   </definition>
+   
+      <!-- Update Retreat Form -->
+   <definition name="updateRetreat" extends="template-def">  
+       <put-attribute name="title" value="Update Retreat Form" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/updateRetreat.jsp" />  
+   </definition> 
+   
+    <!-- Check Form -->
+   <definition name="addCheckForm" extends="template-def">  
+       <put-attribute name="title" value="Check Form" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/addCheckForm.jsp" />  
+   </definition>
+   
+      <!-- Update Retreat Form -->
+   <definition name="updateCheck" extends="template-def">  
+       <put-attribute name="title" value="Update Check Form" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/updateCheck.jsp" />  
+   </definition> 
+   
+   
    <!-- BLockForm File -->
    <definition name="block" extends="template-def">  
        <put-attribute name="title" value="Block Report" />  

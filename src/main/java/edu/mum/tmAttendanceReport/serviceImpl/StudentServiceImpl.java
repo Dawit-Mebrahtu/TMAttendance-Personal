@@ -26,5 +26,12 @@ public class StudentServiceImpl implements StudentService{
 //		// TODO Auto-generated method stub
 //		return null;
 //	}
+	@Autowired
+	StudentRepository studentRepository;
+	
+	@Override
+	public Student findById(long id) {
+		return studentRepository.findById(id).get();
+	}
 
 }
