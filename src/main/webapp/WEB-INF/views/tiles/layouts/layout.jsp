@@ -43,21 +43,24 @@
 										<ul class="dropdown-menu">
 
 											<security:authorize access="hasAnyRole('ADMIN', 'FACULTY')">
-												<li><a href="#">Block</a></li>
-												<li><a href="#">Entry</a></li>
+												<li><a href="/faculty/report/block">Block</a></li>
+												<li><a href="/faculty/entry">Entry</a></li>
 											</security:authorize>
 
 										<%-- <security:authorize access="hasAnyRole('ADMIN', 'FACULTY')">
 											<li><a href="#">Block</a></li>
 											<li><a href="#">Entry</a></li>
 										</security:authorize> --%>
-
-											<li><a href="/student/attendance">Attendance</a></li>
-											<li><a href="#">Checks</a></li>
-											<li><a href="#">Retreats</a></li>
+										
+										<security:authorize access="hasRole('STUDENT')">
+											<li><a href="/student/attendance">TM Attendance</a></li>
+											<li><a href="/student/tmcheckingreport">TM Checks</a></li>
+											<li><a href="/student/retreatreport">Retreats</a></li>
+										</security:authorize>
 										</ul></li>
+										
 									<security:authorize access="hasRole('ADMIN')">
-										<li><a href="#">File Upload</a></li>
+										<li><a href="/admin/upload">File Upload</a></li>
 										<li class="dropdown"><a class="dropdown-toggle"
 											data-toggle="dropdown" href="#">Retreat<span
 												class="caret"></span></a>

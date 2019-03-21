@@ -15,7 +15,7 @@
 		<h3>Entry: <c:out value="${description}" /></h3>
 		
 
-		<a href="/Admin/Entry"><input type="button"
+		<a href="/faculty/entry"><input type="button"
 			value="return to previous" /></a>
 
 		<table class="table">

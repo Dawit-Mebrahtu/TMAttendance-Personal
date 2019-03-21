@@ -1,7 +1,6 @@
 package edu.mum.tmAttendanceReport.controller;
 
 import java.sql.Date;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -15,15 +14,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import edu.mum.tmAttendanceReport.dto.SingleStudentReport;
-import edu.mum.tmAttendanceReport.dto.StudentReport;
 import edu.mum.tmAttendanceReport.entity.Block;
+import edu.mum.tmAttendanceReport.entity.Check;
 import edu.mum.tmAttendanceReport.entity.DateInfo;
+import edu.mum.tmAttendanceReport.entity.Retreat;
 import edu.mum.tmAttendanceReport.entity.Student;
 import edu.mum.tmAttendanceReport.entity.TMAttendance;
 import edu.mum.tmAttendanceReport.service.BlockService;
+import edu.mum.tmAttendanceReport.service.CheckService;
 import edu.mum.tmAttendanceReport.service.CourseOfferedService;
 import edu.mum.tmAttendanceReport.service.CourseService;
 import edu.mum.tmAttendanceReport.service.DateInfoService;
+import edu.mum.tmAttendanceReport.service.RetreatService;
 import edu.mum.tmAttendanceReport.service.StudentService;
 import edu.mum.tmAttendanceReport.service.TMAttendanceService;
 
@@ -48,11 +50,34 @@ public class StudentReportController {
 	
 	@Autowired
 	DateInfoService dateInfoService;
+	
+	@Autowired
+	CheckService checkService;
+	
+	@Autowired
+	RetreatService retreatService;
+	
+	@GetMapping(value = "/tmcheckingreport")
+	public String tmCheckingReport(Model model, HttpSession session) {
+		 Student student = (Student) session.getAttribute("currentStudent");
+		 Check checkRecord = checkService.findByStudentid(student);
+		 model.addAttribute("checkRecord", checkRecord);
+		 
+		 return "tmCheckingReport";
+	}
+	
+	@GetMapping(value = "/retreatreport")
+	public String retreatReport(Model model, HttpSession session) {
+		 Student student = (Student) session.getAttribute("currentStudent");
+		 Retreat retreatRecord = retreatService.findByStudentid(student);
+		 model.addAttribute("retreatRecord", retreatRecord);
+		 
+		 return "retreatReport";
+	}
 
 	@GetMapping(value = "/attendance")
 	public String showPage(Model model, HttpSession session) {
 		 Student student = (Student) session.getAttribute("currentStudent");
-//		 Student student = studentService.findById(987073);
 		
 		Date entryStartDate = new java.sql.Date(student.getEntry().getStartdate().getDate().getTime());
 				
@@ -85,34 +110,6 @@ public class StudentReportController {
 
 		return "redirect:/student/attendance";
 	}
-
-//	@PostMapping(value= "/Report/Block")
-//	public String searchReport(@RequestParam("course") String  courseCode, @RequestParam("block") String  blockId, RedirectAttributes redirect,
-//			                     Model model){
-//		
-//		System.out.println(courseCode);
-//		System.out.println(blockId);
-//		CourseOffered courseOffered ;
-//		Course course = courseService.findById(courseCode);
-//		Block block = blockService.findById(Long.parseLong(blockId));
-//		
-//		
-//		if(course !=null && block!=null) {
-//			model.addAttribute("courseName", course.getName());
-//			model.addAttribute("blockDescription", block.getDescription());
-//			courseOffered = courseOfferedService.findByCourseAndBlock(course, block);
-//			//System.out.println(courseOffered);
-//			List<Student> studentList = courseOffered. getStudents();
-//			//System.out.println(studentList);
-//			List<StudentReport> studentReports = generateResult(studentList, block);
-//			model.addAttribute("studentReports",studentReports);
-//		}
-//		else {
-//			return "redirect:/Report/Block";
-//		}
-//		
-//		return "block";
-//	}
 	
 
 

@@ -1,17 +1,17 @@
 package edu.mum.tmAttendanceReport.controller;
 
-import java.sql.Date;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import edu.mum.tmAttendanceReport.dto.StudentReport;
 import edu.mum.tmAttendanceReport.entity.Block;
 import edu.mum.tmAttendanceReport.entity.Course;
@@ -21,10 +21,10 @@ import edu.mum.tmAttendanceReport.entity.TMAttendance;
 import edu.mum.tmAttendanceReport.service.BlockService;
 import edu.mum.tmAttendanceReport.service.CourseOfferedService;
 import edu.mum.tmAttendanceReport.service.CourseService;
-
 import edu.mum.tmAttendanceReport.service.TMAttendanceService;
 
 @Controller
+@RequestMapping(value="/faculty")
 public class BlockController {
 
 	@Autowired
@@ -42,7 +42,7 @@ public class BlockController {
 	@Autowired
 	private TMAttendanceService tmAttendanceService;
 
-	@GetMapping(value = "/Report/Block")
+	@GetMapping(value = "/report/block")
 	public String showPage(Model model) {
 		List<Block> bList = blockService.findAll();
 		List<Course> cList = courseService.findAll();
@@ -53,7 +53,7 @@ public class BlockController {
 		return "blockForm";
 	}
 
-	@PostMapping(value= "/Report/Block")
+	@PostMapping(value= "/report/block")
 	public String searchReport(@RequestParam("course") String  courseCode, @RequestParam("block") String  blockId, RedirectAttributes redirect,
 			                     Model model){
 		
@@ -75,7 +75,7 @@ public class BlockController {
 			model.addAttribute("studentReports",studentReports);
 		}
 		else {
-			return "redirect:/Report/Block";
+			return "redirect:/faculty/report/block";
 		}
 		
 		return "block";

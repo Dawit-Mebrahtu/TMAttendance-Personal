@@ -30,7 +30,7 @@
 					<p></p>
 					<br> <br> <br>
 					<div class="form-group">
-						<form action="/Admin/Entry" method="post">
+						<form action="/faculty/entry" method="post">
 							<div class="container">
 								<div class="container">
 									<div class="container">

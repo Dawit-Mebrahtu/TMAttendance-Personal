@@ -28,7 +28,7 @@
 					<p>The form below contains two dropdown menus (select lists):</p>
 					<br> <br> <br>
 					<div class="form-group">
-						<form action="/Report/Block" method="post">
+						<form action="/faculty/report/block" method="post">
 							<div class="container">
 								<div class="container">
 									<div class="container">

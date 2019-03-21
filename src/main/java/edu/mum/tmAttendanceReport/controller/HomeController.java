@@ -27,6 +27,8 @@ public class HomeController {
 	public ModelAndView showPage(Principal user, HttpSession session) {
 		
 		User currentUser = userService.findByEmail(user.getName()) ;
+		session.setAttribute("currentUser", currentUser.getEmail());
+		
 		Student currentStudent = studentService.findByUser(currentUser);
 		
 		if(currentStudent != null) {

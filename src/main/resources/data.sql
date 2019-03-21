@@ -1,34 +1,3 @@
--- Authentication role types
-INSERT INTO `role` VALUES (1,'ROLE_ADMIN');
-INSERT INTO `role` VALUES (2,'ROLE_FACULTY');
-INSERT INTO `role` VALUES (3,'ROLE_STUDENT');
-
-
--- Authentication credentials
-INSERT INTO `users`(user_id, active, email, password) VALUES (1, 1, 'dmebrahtu@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
-INSERT INTO `users`(user_id, active, email, password) VALUES (2, 1, 'jndamutsa@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
-INSERT INTO `users`(user_id, active, email, password) VALUES (3, 1, 'ngoitom@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
-INSERT INTO `users`(user_id, active, email, password) VALUES (4, 1, 'shaileslassie@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
-INSERT INTO `users`(user_id, active, email, password) VALUES (5, 1, 'rxing@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
-
-
--- User and Role join table
-INSERT INTO `user_role`(user_id, role_id) VALUES (1, 3);
-INSERT INTO `user_role`(user_id, role_id) VALUES (2, 1);
-INSERT INTO `user_role`(user_id, role_id) VALUES (3, 1);
-INSERT INTO `user_role`(user_id, role_id) VALUES (4, 2);
-
-
--- Admins info
-INSERT INTO `admin`(id, name, user_id) VALUES (1, 'Jesse', 2);
-INSERT INTO `admin`(id, name, user_id) VALUES (2, 'Natsiner', 3);
-
-
--- Faculties info
-INSERT INTO `faculty`(id, first_name, last_name, user_id) VALUES (1, 'Sofia', 'Haileslassie', 4);
-INSERT INTO `faculty`(id, first_name, last_name, user_id) VALUES(2, 'Rujuan', 'Xing', 5);
-
-
 -- Date info (everydays date info)
 -- Date info (everydays date info)
 --  Date info 2016/11
@@ -109,61 +78,34 @@ INSERT INTO `date_info`(id, date_record) VALUES(67, '2017-02-14');
 INSERT INTO `date_info`(id, date_record) VALUES(68, '2017-02-15');
 INSERT INTO `date_info`(id, date_record) VALUES(69, '2017-02-16');
 
-
-
--- TM Attendance slots
-INSERT INTO `time_info`(id, time_of_day) VALUES(1, 'EAM');
-INSERT INTO `time_info`(id, time_of_day) VALUES(2, 'AM');
-INSERT INTO `time_info`(id, time_of_day) VALUES(3, 'PM');
-
-
 -- University addmission dates info
 INSERT INTO entry(id, start_Period, date_info_id) VALUES(1, 'Nov 2016', 1);
 INSERT INTO entry(id, start_Period, date_info_id) VALUES(2, 'Jan 2017', 33);
 INSERT INTO entry(id, start_Period, date_info_id) VALUES(3, 'Feb 2017', 57);
 
 
--- University block dates info
-INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(1, '2016-11-17', '2016-11-30', 10, 'Nov 2016');
-INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(2, '2017-01-03', '2017-01-31', 22, 'Jan 2017');
-INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(3, '2017-02-01', '2017-02-16', 10, 'Feb 2017');
+-- Authentication role types
+INSERT INTO `role` VALUES (1,'ROLE_ADMIN');
+INSERT INTO `role` VALUES (2,'ROLE_FACULTY');
+INSERT INTO `role` VALUES (3,'ROLE_STUDENT');
 
 
--- University course catalog 
-INSERT INTO `course`(code, name) VALUES('CS545', 'Web Application Architecture');
-INSERT INTO `course`(code, name) VALUES('CS572', 'Modern Web Applications');
-INSERT INTO `course`(code, name) VALUES('CS425', 'Software Engineering');
-INSERT INTO `course`(code, name) VALUES('CS472', 'Web Application Program');
+-- Authentication credentials
+INSERT INTO `users`(user_id, active, email, password) VALUES (1, 1, 'dmebrahtu@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
+INSERT INTO `users`(user_id, active, email, password) VALUES (2, 1, 'jndamutsa@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
+INSERT INTO `users`(user_id, active, email, password) VALUES (3, 1, 'ngoitom@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
+INSERT INTO `users`(user_id, active, email, password) VALUES (4, 1, 'shaileslassie@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
+INSERT INTO `users`(user_id, active, email, password) VALUES (5, 1, 'rxing@mum.edu', '$2a$10$S/wlXEo/APzf.Sn1cO2p4.V12EJmaw.uzrHelMvkpuahjmHWnSafe');
 
 
+-- User and Role join table
+INSERT INTO `user_role`(user_id, role_id) VALUES (1, 3);
+INSERT INTO `user_role`(user_id, role_id) VALUES (2, 1);
+INSERT INTO `user_role`(user_id, role_id) VALUES (3, 1);
+INSERT INTO `user_role`(user_id, role_id) VALUES (4, 2);
 
 -- Students info
 INSERT INTO `student`(student_id, first_name, last_name, bar_code, entry_id, user_id) VALUES (987073, 'Dawit', 'Mebrahtu', '9737', 1, 1);
-
-
--- Course offered in each block info
-INSERT INTO `course_offered`(block_id, course_id, faculty_id) VALUES(1, 'CS545', 2);
-
-
--- Course offered in each block and students enrolled in the course info
-INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987073);
-
--- TM attendance locations
-INSERT INTO `place`(id, name) VALUES(1, 'DB');
-INSERT INTO `place`(id, name) VALUES(2, 'Dome');
-INSERT INTO `place`(id, name) VALUES(3, 'Ladies Palace');
-
-
--- Students TM checking record
-INSERT INTO `tmcheck`(id, student_id, number_of_checks) VALUES(1, 987073, 2);
-
--- Students Retreat record
-INSERT INTO `retreat`(id, student_id, number_of_retreats) VALUES(1, 987073, 1);
-
-
-
--- Students info
---INSERT INTO `student`(student_id, first_name, last_name, bar_code, entry_id, user_id) VALUES (987073, 'Dawit', 'Mebrahtu', '9737', 1, 1);
 
 INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (986801, 'lekbigr', 'pjtvo', '7326', 2, );
 INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (986802, 'dpacsof', 'iofwb', '7698', 2, );
@@ -438,4 +380,116 @@ INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUE
 INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (987071, 'zuxjafi', 'rtlbs', '9927', 1, );
 INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (987072, 'hdplmjo', 'jbmqs', '6286', 3, );
 INSERT INTO student(student_id, first_name, last_name, bar_code, entry_id) VALUES (987074, 'derfdrf', 'pjtvo', '7888', 2, );
+
+
+
+
+
+-- Admins info
+INSERT INTO `admin`(id, name, user_id) VALUES (1, 'Jesse', 2);
+INSERT INTO `admin`(id, name, user_id) VALUES (2, 'Natsiner', 3);
+
+
+-- Faculties info
+INSERT INTO `faculty`(id, first_name, last_name, user_id) VALUES (1, 'Sofia', 'Haileslassie', 4);
+INSERT INTO `faculty`(id, first_name, last_name, user_id) VALUES(2, 'Rujuan', 'Xing', 5);
+
+
+-- TM Attendance slots
+INSERT INTO `time_info`(id, time_of_day) VALUES(1, 'EAM');
+INSERT INTO `time_info`(id, time_of_day) VALUES(2, 'AM');
+INSERT INTO `time_info`(id, time_of_day) VALUES(3, 'PM');
+
+
+
+
+
+-- University block dates info
+INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(1, '2016-11-17', '2016-11-30', 10, 'Nov 2016');
+INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(2, '2017-01-03', '2017-01-31', 22, 'Jan 2017');
+INSERT INTO `block`(id, start_date, end_date, period, description) VALUES(3, '2017-02-01', '2017-02-16', 10, 'Feb 2017');
+
+
+-- University course catalog 
+INSERT INTO `course`(code, name) VALUES('CS545', 'Web Application Architecture');
+INSERT INTO `course`(code, name) VALUES('CS572', 'Modern Web Applications');
+INSERT INTO `course`(code, name) VALUES('CS425', 'Software Engineering');
+INSERT INTO `course`(code, name) VALUES('CS472', 'Web Application Program');
+
+-- Course offered in each block info
+INSERT INTO `course_offered`(block_id, course_id, faculty_id) VALUES(1, 'CS545', 2);
+
+
+-- Course offered in each block and students enrolled in the course info
+
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987068);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987069);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987070);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987071);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987072);
+INSERT INTO `course_offered_students`(course_offered_block_id, course_offered_course_id, students_student_id) VALUES(1, 'CS545', 987073);
+
+-- TM attendance locations
+INSERT INTO `place`(id, name) VALUES(1, 'DB');
+INSERT INTO `place`(id, name) VALUES(2, 'Dome');
+INSERT INTO `place`(id, name) VALUES(3, 'Ladies Palace');
+
+-- TM attendance
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 1, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 1, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 1, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 1, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 1, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 1, 1, 2);
+
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 2, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 2, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 2, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 2, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 2, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 2, 1, 2);
+
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 3, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 3, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 3, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 3, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 3, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 3, 1, 2);
+
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 4, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 4, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 4, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 4, 1, 2);
+
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 9, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 9, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 9, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 9, 1, 2);
+
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 5, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 5, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 5, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 5, 1, 2);
+
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 6, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 6, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 6, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 6, 1, 2);
+
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 7, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 7, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 7, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 7, 1, 2);
+
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 8, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 8, 1, 2);
+INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 8, 1, 2);
+
+-- Students TM checking record
+INSERT INTO `tmcheck`(id, student_id, number_of_checks) VALUES(1, 987073, 2);
+
+-- Students Retreat record
+INSERT INTO `retreat`(id, student_id, number_of_retreats) VALUES(1, 987073, 1);
+
+
 

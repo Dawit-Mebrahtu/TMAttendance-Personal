@@ -25,10 +25,14 @@ public class DateInfoServiceImpl implements DateInfoService {
 		return dateInfoRepository.findByDateAfter(startDate);
 	}
 
+	
 	@Override
 	public List<DateInfo> Daysgreaterthan(java.sql.Date startDate) {
 		// TODO Auto-generated method stub
-		return null;
+		return dateInfoRepository.Daysgreaterthan(startDate);
 	}
+
+
+	
 
 }

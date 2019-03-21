@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -23,6 +24,7 @@ import edu.mum.tmAttendanceReport.service.StudentService;
 import edu.mum.tmAttendanceReport.service.TMAttendanceService;
 
 @Controller
+@RequestMapping(value="/faculty")
 public class EntryController {
 	
 	
@@ -36,7 +38,7 @@ public class EntryController {
 	@Autowired
 	private TMAttendanceService tmAttendanceService;
 	
-	@GetMapping(value="/Admin/Entry")
+	@GetMapping(value="/entry")
 	public String showpage(Model model)
 	{
 		List<Entry> entryList= entryService.findAll();
@@ -48,7 +50,7 @@ public class EntryController {
 	
 	
 	
-	@PostMapping(value="/Admin/Entry")
+	@PostMapping(value="/entry")
 	public String showStudentbyEntry(@RequestParam("entry") String id,RedirectAttributes redirect, Model model)
 	{
 		
@@ -101,10 +103,10 @@ public class EntryController {
 	redirect.addFlashAttribute("description",description );
 	
 
-			return "redirect:/Admin/Entry/viewEntryList" ;
+			return "redirect:/faculty/entry/viewEntryList" ;
 	}
 	
-	@GetMapping(value="/Admin/Entry/viewEntryList")
+	@GetMapping(value="/entry/viewEntryList")
 	public String showStudentbyEntrylist(Model model)
 	{
 		return "entry";

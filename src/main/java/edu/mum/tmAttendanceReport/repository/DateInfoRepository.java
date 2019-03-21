@@ -17,6 +17,9 @@ public interface DateInfoRepository extends CrudRepository<DateInfo, DateInfo>{
 	public DateInfo getDateInfoByDate(Date date);
 
 	public List<DateInfo> findByDateAfter(Date startDate);
+	
+	@Query(value="SELECT d FROM DateInfo d WHERE d.date >=:startDate ")
+	List<DateInfo> Daysgreaterthan(java.sql.Date startDate);
 
 
 }

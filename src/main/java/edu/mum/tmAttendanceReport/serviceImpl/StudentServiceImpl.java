@@ -31,7 +31,7 @@ public class StudentServiceImpl implements StudentService{
 	
 	public List<Student> findAllByEntry(Long id) {
 
-		return (List<Student>) studentrepository.findAllById(id);
+		return (List<Student>) studentRepository.findAllById(id);
 	}
 
 //	@Override
