@@ -22,12 +22,12 @@ public class LoginController {
 //	@Autowired
 //	private UserService userService;
 	
-//	@Autowired
-//	private LoadDataService loadDataService;
+	@Autowired
+	private LoadDataService loadDataService;
 
 	@RequestMapping(value = {"/", "/login" }, method = RequestMethod.GET)
 	public ModelAndView login() {
-//		loadDataService.loadData(); 
+     	loadDataService.loadData(); 
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("login");
 		return modelAndView;
