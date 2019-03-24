@@ -33,45 +33,6 @@ public class LoginController {
 		return modelAndView;
 	}
 
-	@RequestMapping(value = "/registration", method = RequestMethod.GET)
-	public ModelAndView registration() {
-		
-		ModelAndView modelAndView = new ModelAndView();
-		User user = new User();
-		modelAndView.addObject("user", user);
-//		modelAndView.setViewName("registration");
-		modelAndView.setViewName("success");
-		return modelAndView;
-	}
-	
-//	@RequestMapping(value = {"/home" }, method = RequestMethod.GET)
-//	public ModelAndView successfulLogin(Principal user) {
-//		
-//		ModelAndView modelAndView = new ModelAndView();
-//		modelAndView.addObject("currentUser", user.getName());
-//		modelAndView.setViewName("home");
-//		return modelAndView;
-//	}
-//
-//	@RequestMapping(value = "/registration", method = RequestMethod.POST)
-//	public ModelAndView createNewUser(@Valid User user, BindingResult bindingResult) {
-//		ModelAndView modelAndView = new ModelAndView();
-//		User userExists = userService.findUserByEmail(user.getEmail());
-//		if (userExists != null) {
-//			bindingResult.rejectValue("email", "error.user",
-//					"There is already a user registered with the email provided");
-//		}
-//		if (bindingResult.hasErrors()) {
-//			modelAndView.setViewName("registration");
-//		} else {
-//			userService.saveUser(user);
-//			modelAndView.addObject("successMessage", "User has been registered successfully");
-//			modelAndView.addObject("user", new User());
-//			modelAndView.setViewName("registration");
-//
-//		}
-//		return modelAndView;
-//	}
 
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logoutPage(HttpServletRequest request, HttpServletResponse response) {

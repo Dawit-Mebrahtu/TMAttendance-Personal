@@ -434,56 +434,56 @@ INSERT INTO `place`(id, name) VALUES(1, 'DB');
 INSERT INTO `place`(id, name) VALUES(2, 'Dome');
 INSERT INTO `place`(id, name) VALUES(3, 'Ladies Palace');
 
--- TM attendance
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 1, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 1, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 1, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 1, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 1, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 1, 1, 2);
-
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 2, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 2, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 2, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 2, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 2, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 2, 1, 2);
-
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 3, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 3, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 3, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 3, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 3, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 3, 1, 2);
-
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 4, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 4, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 4, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 4, 1, 2);
-
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 9, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 9, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 9, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 9, 1, 2);
-
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 5, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 5, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 5, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 5, 1, 2);
-
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 6, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 6, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 6, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 6, 1, 2);
-
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 7, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 7, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 7, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 7, 1, 2);
-
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 8, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 8, 1, 2);
-INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 8, 1, 2);
+---- TM attendance
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 1, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 1, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 1, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 1, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 1, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 1, 1, 2);
+--
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 2, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 2, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 2, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 2, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 2, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 2, 1, 2);
+--
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 3, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 3, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 3, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 3, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 3, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 3, 1, 2);
+--
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 4, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 4, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 4, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 4, 1, 2);
+--
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 9, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 9, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 9, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 9, 1, 2);
+--
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 5, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 5, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 5, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 5, 1, 2);
+--
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 6, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 6, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 6, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 6, 1, 2);
+--
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987068, 7, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987069, 7, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987070, 7, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 7, 1, 2);
+--
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987071, 8, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987072, 8, 1, 2);
+--INSERT INTO `tm_attendance`(student_id, date, place_id, time_info_id) VALUES(987073, 8, 1, 2);
 
 -- Students TM checking record
 INSERT INTO `tmcheck`(id, student_id, number_of_checks) VALUES(1, 987073, 2);

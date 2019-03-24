@@ -51,11 +51,14 @@ public class AdminController {
 	public String uploadFile(Model model,
 			@RequestParam("file") MultipartFile file){
 
-		Path fileNameAndPath = Paths.get(uploadingDir, file.getOriginalFilename());
+//		Path fileNameAndPath = Paths.get(uploadingDir, file.getOriginalFilename());
         	try {
+        		Path fileNameAndPath = Paths.get(uploadingDir, file.getOriginalFilename());
 				Files.write(fileNameAndPath, file.getBytes());
+				System.out.println("UPLOAD SUCCESSFUL");
 				return "uploadResult";
 			} catch (IOException e) {
+				System.out.println("UPLOAD FAILED");
 				e.printStackTrace();
 				return "fileNotFound";
 			}

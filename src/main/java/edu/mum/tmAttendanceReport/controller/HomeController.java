@@ -42,4 +42,9 @@ public class HomeController {
 		
 		return modelAndView;
 	}
+	
+	@GetMapping(value = "/error")
+	public String errorPage() {
+		return "error";
+	}
 }
