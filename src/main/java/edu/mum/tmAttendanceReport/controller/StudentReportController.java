@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import edu.mum.tmAttendanceReport.dto.SingleStudentReport;
 import edu.mum.tmAttendanceReport.entity.Block;
@@ -97,60 +98,17 @@ public class StudentReportController {
 	}
 	
 	@PostMapping(value = "/attendance")
-	public String blockAttendance(@RequestParam("blocks") Long blockId, Model model, HttpSession session) {
+	public String blockAttendance(@RequestParam("blocks") Long blockId, RedirectAttributes redirectAttributes, HttpSession session) {
 		Block block = blockService.findById(blockId);
-		System.out.println(block);
 		
 		Student student = (Student) session.getAttribute("currentStudent");
 		
 		if(block!=null) {
-			SingleStudentReport studentReports = generateResult(student, block);
-			model.addAttribute("studentReports",studentReports);
+			SingleStudentReport studentReports = studentService.generateResult(student, block);
+			redirectAttributes.addFlashAttribute("studentReports", studentReports);
 		}
 
 		return "redirect:/student/attendance";
-	}
-	
-
-
-	public SingleStudentReport generateResult(Student student, Block block) {
-//		final DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-
-		java.sql.Date startDate = new java.sql.Date(block.getStartDate().getTime());
-		java.sql.Date endDate = new java.sql.Date(block.getEndDate().getTime());
-		Integer numberOfDaysInBlock = Integer.parseInt(block.getPeriod());
-
-
-			SingleStudentReport studentReport = new SingleStudentReport();
-			
-
-			List<TMAttendance> studentBlockAttendanceList = tmAttendanceService
-					.findAttendanceByDates(student.getStudentId(), startDate, endDate);
-			
-			
-
-			double percentage = (double) (studentBlockAttendanceList.size() / numberOfDaysInBlock) * 100;
-			
-			studentReport.setSessions(String.valueOf(numberOfDaysInBlock)); 
-			studentReport.setAttended(String.valueOf(studentBlockAttendanceList.size()));
-			studentReport.setPercentage(String.valueOf(percentage));
-			studentReport.setTmAttendance(studentBlockAttendanceList);
-			
-			
-
-			if (percentage >= 90.0) {
-				studentReport.setCreditScore("1.5");
-			} else if (percentage >= 80.0) {
-				studentReport.setCreditScore("1.0");
-			} else if (percentage >= 70.0) {
-				studentReport.setCreditScore("0.5");
-			} else {
-				studentReport.setCreditScore("0.0");
-			}
-
-			System.out.println(studentReport);
-
-		return studentReport;
 	}
 	
 }

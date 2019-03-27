@@ -33,7 +33,7 @@ import edu.mum.tmAttendanceReport.service.TimeInfoService;
 
 
 
- @Service
+@Service
 public class LoadDataServiceImpl implements LoadDataService{
 	
 	@Autowired
@@ -62,7 +62,8 @@ public class LoadDataServiceImpl implements LoadDataService{
 	public void loadData() {
 
 		Stream<String> data = null;
-		Path path = Paths.get("data/rc_data.txt");
+		Path path = Paths.get("uploads/rc_data.txt");
+//		Path path = Paths.get("data/rc_data.txt");
 
 		try {
 			data = Files.lines(path).parallel().distinct();

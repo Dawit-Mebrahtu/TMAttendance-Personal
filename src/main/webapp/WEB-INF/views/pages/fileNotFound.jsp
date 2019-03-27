@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Upload Failed</title>
 </head>
 <body>
-   <h1> File Not Found Page</h1>
+   <h1> Upload Failed</h1>
 </body>
 </html>

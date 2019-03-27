@@ -17,9 +17,8 @@
 
 <img src="<spring:url value="/images/error_page.jpg"  htmlEscape="true" />" alt="Page not found  JSP!!!"  />
 
-<H2>${requestScope['javax.servlet.error.message']}</H2>
-${exception} 
-${url} 
+<h3 class="alert alert-danger"> ${message} </h3>
+
 
  
  <p><a href="<spring:url value="/home" />" class="btn btn-primary">Home</a></p>

@@ -26,7 +26,7 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="container">
-					<h2>Entry Report Select Form</h2>
+					<h2>TM Attendance Report By Entry</h2>
 					<p></p>
 					<br> <br> <br>
 					<div class="form-group">
@@ -48,7 +48,7 @@
 								<div class="container">
 									<div class="container">
 										<p id="buttons">
-											<input id="submit" value="Find Report" type="submit"
+											<input id="submit" value="Show Report" type="submit"
 												tabindex="5" />
 										</p>
 									</div>

@@ -8,12 +8,11 @@ body {
 #body-container {
    min-height:100%;
    position:relative;
-}
-#body-container {
    height:100%;
 }
+
 #header {
-   background:#ff0;
+ /*   background:#ff0;  */
    padding:10px;
 }
 
@@ -23,13 +22,13 @@ body {
    padding-bottom:60px;   /* Height of the footer */
 }
 
-/* #footer {
-   position:absolute;
+#footer {
+   position:fixed;
    bottom:0;
    width:100%;
-   height:60px;   Height of the footer
-   background:#000000;
-} */
+   height:60px;
+   background:#6cf;
+}
 
 
 /* Remove the navbar's default margin-bottom and rounded borders */ 
@@ -44,7 +43,7 @@ body {
     /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 20px;
-      background-color: #f1f1f1;
+   /*    background-color: #f1f1f1; */
       height: 100%;
     }
     
@@ -64,11 +63,5 @@ body {
       .row.content {height:auto;} 
     }
     
-   #footer {
-   position:fixed;
-   bottom:0;
-   width:100%;
-   height:60px;   /* Height of the footer */
-   background:#6cf;
-} 
+ 
 

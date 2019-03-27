@@ -13,13 +13,10 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../../../css/main.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div id="body-container">
@@ -36,7 +33,7 @@
 									<a class="navbar-brand" href="#">TM Attendance</a>
 								</div>
 								<ul class="nav navbar-nav">
-									<li class="active"><a href="#">Home</a></li>
+									<li class="active"><a href="/home">Home</a></li>
 									<li class="dropdown"><a class="dropdown-toggle"
 										data-toggle="dropdown" href="#">TM Report<span
 											class="caret"></span></a>
@@ -111,19 +108,35 @@
 			</div>
 		</div>
 		<!-- End  main body -->
-
+		
 		<!-- Begin Footer -->
-		<div id="footer" >
+		 <div id="footer" >
 			<footer>
 				<div class="container">
-					<div class="ooter-copyright  py-3 text-white bg-dark">
+					<div class="footer-copyright  py-3 text-white bg-dark">
+						<p class="text-muted">
+							<div class="footer">
+								<tiles:insertAttribute name="footer" />
+							</div>
+						</p>
+					</div>
+				</div>
+			</footer>
+		</div> 
+		<!-- End Footer -->
+
+		<!-- Begin Footer -->
+		<!-- <div id="footer" >
+			<footer>
+				<div class="container">
+					<div class="footer-copyright  py-3 text-white bg-dark">
 						<p class="text-muted">
 							© 2019 Copyright: <a href="#"> tmattendance.mum.edu</a>
 						</p>
 					</div>
 				</div>
 			</footer>
-		</div>
+		</div> -->
 		<!-- End Footer -->
 
 	</div>

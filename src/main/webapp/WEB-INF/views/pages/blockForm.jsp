@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Add Employee Form</title>
+<title>Select Block and Course</title>
 <link rel="stylesheet" href="../../css/index.css">
 </head>
 <body>
@@ -24,8 +24,8 @@
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="container">
-					<h2>Choose:</h2>
-					<p>The form below contains two dropdown menus (select lists):</p>
+					<h2>TM Attendance Report By Course</h2>
+					<p>Please select the course and block first</p>
 					<br> <br> <br>
 					<div class="form-group">
 						<form action="/faculty/report/block" method="post">
@@ -57,7 +57,7 @@
 								<div class="container">
 									<div class="container">
 										<p id="buttons">
-											<input id="submit" value="Find Report" type="submit"
+											<input id="submit" value="Show Report" type="submit"
 												tabindex="5" />
 										</p>
 									</div>

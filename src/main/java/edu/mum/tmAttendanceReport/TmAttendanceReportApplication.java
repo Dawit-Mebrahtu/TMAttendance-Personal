@@ -23,15 +23,6 @@ public class TmAttendanceReportApplication {
 		
 	}
 
-	
-//	@Override
-//	public void run(String... args) throws Exception {
-//			
-//			LoadData.load();
-//			
-//			//System.out.println(listOfStudent.get(0));
-//			
-//	}
 
 }
 

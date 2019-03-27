@@ -20,6 +20,7 @@ import edu.mum.tmAttendanceReport.entity.Check;
 import edu.mum.tmAttendanceReport.entity.Retreat;
 import edu.mum.tmAttendanceReport.entity.Student;
 import edu.mum.tmAttendanceReport.service.CheckService;
+import edu.mum.tmAttendanceReport.service.LoadDataService;
 import edu.mum.tmAttendanceReport.service.RetreatService;
 import edu.mum.tmAttendanceReport.service.StudentService;
 
@@ -37,6 +38,9 @@ public class AdminController {
 	
 	@Autowired
 	StudentService studentService;
+	
+	@Autowired
+	private LoadDataService loadDataService;
 
 	// GET: Show upload form page.
 	@RequestMapping(value = "/upload")
@@ -55,10 +59,9 @@ public class AdminController {
         	try {
         		Path fileNameAndPath = Paths.get(uploadingDir, file.getOriginalFilename());
 				Files.write(fileNameAndPath, file.getBytes());
-				System.out.println("UPLOAD SUCCESSFUL");
+				loadDataService.loadData(); 
 				return "uploadResult";
 			} catch (IOException e) {
-				System.out.println("UPLOAD FAILED");
 				e.printStackTrace();
 				return "fileNotFound";
 			}

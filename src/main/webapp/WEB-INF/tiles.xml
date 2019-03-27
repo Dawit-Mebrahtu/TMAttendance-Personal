@@ -7,7 +7,8 @@
    <definition name="template-def"
        template="/WEB-INF/views/tiles/layouts/layout.jsp">  
        <put-attribute name="title" value="" />  
-       <put-attribute name="body" value="" />  
+       <put-attribute name="body" value="" /> 
+       <put-attribute name="footer" value="/WEB-INF/views/tiles/layouts/footer.jsp" />  
    </definition>  
   
    <!-- Main Page -->
@@ -30,7 +31,7 @@
   
    <!-- fileNotFound Page -->
    <definition name="fileNotFound" extends="template-def">  
-       <put-attribute name="title" value="Upload Error" />  
+       <put-attribute name="title" value="Upload Failed" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/fileNotFound.jsp" />  
    </definition>  
    
@@ -91,39 +92,45 @@
    
    <!-- BLockForm File -->
    <definition name="entryForm" extends="template-def">  
-       <put-attribute name="title" value="Block Report" />  
+       <put-attribute name="title" value="Entry Form" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/entryForm.jsp" />  
    </definition> 
    
    
    <!-- BLockForm File -->
    <definition name="entry" extends="template-def">  
-       <put-attribute name="title" value="Block Report" />  
+       <put-attribute name="title" value="Entry Report" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/entry.jsp" />  
    </definition> 
    
    <!-- Retreat Report -->
    <definition name="retreatReport" extends="template-def">  
-       <put-attribute name="title" value="Block Report" />  
+       <put-attribute name="title" value="Retreat Report" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/retreatReport.jsp" />  
    </definition> 
    
    <!-- TM Checking Report -->
    <definition name="tmCheckingReport" extends="template-def">  
-       <put-attribute name="title" value="Block Report" />  
+       <put-attribute name="title" value="TM Checking Report" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/tmCheckingReport.jsp" />  
    </definition>
    
    <!-- Access Denied Page -->
    <definition name="accessDenied" extends="template-def">  
-       <put-attribute name="title" value="Block Report" />  
+       <put-attribute name="title" value="Access Denied" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/accessDenied.jsp" />  
    </definition>
    
       <!-- Error Page -->
    <definition name="error" extends="template-def">  
-       <put-attribute name="title" value="Block Report" />  
+       <put-attribute name="title" value="Error" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/error.jsp" />  
+   </definition> 
+   
+   <!-- Course Not Offered Error Page -->
+   <definition name="courseNotOffered" extends="template-def">  
+       <put-attribute name="title" value="Course Not Offered" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/courseNotOffered.jsp" />  
    </definition> 
    
     

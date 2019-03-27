@@ -17,8 +17,7 @@
 		<h3>Course: <c:out value="${courseName}" /></h3>
 		<h3>Block: <c:out value="${blockDescription}" /></h3>
 
-		<a href="/faculty/report/block"><input type="button"
-			value="return to previous" /></a>
+		<a href="/faculty/report/block" class="btn btn-primary">Back</a>
 
 		<table class="table">
 			<thead>

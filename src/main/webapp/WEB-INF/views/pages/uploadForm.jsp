@@ -7,10 +7,10 @@
 </head>
 <body>
 <body>
-	<h1>Administrator Panel</h1>
+	<h1>Upload TM Attendance File</h1>
 
 	<form class="md-form" th:object="${fileUploadInfo}"
-		action="/upload" method="post" enctype="multipart/form-data">
+		action="/admin/upload" method="post" enctype="multipart/form-data">
 		<div class="container">
 			<div class="container">
 				<div class="container">

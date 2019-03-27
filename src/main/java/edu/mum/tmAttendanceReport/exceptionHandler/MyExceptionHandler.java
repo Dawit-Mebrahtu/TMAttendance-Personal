@@ -10,10 +10,28 @@ import org.springframework.web.servlet.ModelAndView;
 public class MyExceptionHandler {
 
 	@ExceptionHandler(MyException.class)
-	public ModelAndView handleError(HttpServletRequest req, MyException exception) {
+	public ModelAndView handleFileNotFoundError(HttpServletRequest req, MyException exception) {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("message", exception.getMessage());
 		mav.setViewName("fileNotFound");
+		return mav;
+	}
+	
+	
+	@ExceptionHandler(CourseNotOfferedException.class)
+	public ModelAndView handleCourseNotOffered(HttpServletRequest req, CourseNotOfferedException exception) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("message", exception.getFullMessage());
+		mav.setViewName("courseNotOffered");
+		return mav;
+	}
+	
+	@ExceptionHandler(Exception.class)
+	public ModelAndView handleAllError(HttpServletRequest req, Exception exception) {
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("exception", exception);
+		mav.addObject("url", req.getRequestURL());
+		mav.setViewName("error");
 		return mav;
 	}
 }

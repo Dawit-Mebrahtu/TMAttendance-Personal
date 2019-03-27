@@ -1,6 +1,8 @@
 package edu.mum.tmAttendanceReport.service;
 import java.util.List;
 
+import edu.mum.tmAttendanceReport.dto.SingleStudentReport;
+import edu.mum.tmAttendanceReport.entity.Block;
 import edu.mum.tmAttendanceReport.entity.Student;
 
 import java.util.List;
@@ -19,5 +21,7 @@ public interface StudentService {
 	//List<Student> findAll();
 
 	List<Student> findAllByEntry(Long id);
+	
+	public SingleStudentReport generateResult(Student student, Block block);
 
 }
