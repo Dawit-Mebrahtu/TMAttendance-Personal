@@ -87,7 +87,7 @@ public class StudentReportController {
 		List<TMAttendance> totalAttendedSessions = tmAttendanceService
 				.findTotalAttendance(student.getStudentId(), entryStartDate);
 		
-		double percentage = (double) (totalAttendedSessions.size() / dateList.size()) * 100;
+		double percentage = ((double) totalAttendedSessions.size() / dateList.size()) * 100;
 
 		model.addAttribute("totalSessions", dateList.size());
 		model.addAttribute("totalSessionsAttended", totalAttendedSessions.size());

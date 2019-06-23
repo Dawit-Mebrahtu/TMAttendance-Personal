@@ -18,6 +18,7 @@
 		<h3>Block: <c:out value="${blockDescription}" /></h3>
 
 		<a href="/faculty/report/block" class="btn btn-primary">Back</a>
+		<a href="/faculty/excelreport" class="btn btn-primary">Export As Excel</a>
 
 		<table class="table">
 			<thead>

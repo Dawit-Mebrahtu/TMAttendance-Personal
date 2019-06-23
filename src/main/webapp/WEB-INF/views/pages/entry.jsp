@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,11 +14,13 @@
 <div class="container">
 		<h2>TM Attendance Report per Entry</h2>
 		<h3>Entry: <c:out value="${description}" /></h3>
-		
 
-		<a href="/faculty/entry" class="btn btn-primary">Back</a>
 
-		<table class="table">
+	<a href="/faculty/entry" class="btn btn-primary">Back</a>
+<%--	<a href="/faculty/excel" class="btn btn-primary"><img src="<spring:url value="/images/excel.png" htmlEscape="true" />" alt="Excel icon" /></a>--%>
+	<a href="/faculty/excelreport" class="btn btn-primary">Export As Excel</a>
+
+	<table class="table">
 			<thead>
 				<tr>
 					<th>ID</th>

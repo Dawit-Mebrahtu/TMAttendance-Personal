@@ -21,6 +21,8 @@ import edu.mum.tmAttendanceReport.service.BlockService;
 import edu.mum.tmAttendanceReport.service.CourseOfferedService;
 import edu.mum.tmAttendanceReport.service.CourseService;
 
+import javax.servlet.http.HttpSession;
+
 
 @Controller
 @RequestMapping(value="/faculty")
@@ -48,7 +50,8 @@ public class BlockController {
 	}
 
 	@PostMapping(value= "/report/block")
-	public String searchReport(@RequestParam("course") String  courseCode, @RequestParam("block") String  blockId, Model model){
+	public String searchReport(@RequestParam("course") String  courseCode, @RequestParam("block") String  blockId, Model model,
+								HttpSession httpSession){
 		
 		System.out.println(courseCode);
 		System.out.println(blockId);
@@ -65,6 +68,7 @@ public class BlockController {
 				List<Student> studentList = courseOffered. getStudents();
 				List<StudentReport> studentReports = blockService.generateResult(studentList, block);
 				model.addAttribute("studentReports",studentReports);
+				httpSession.setAttribute("studentReports", studentReports);
 				
 			}catch(Exception e) {
 				throw new CourseNotOfferedException();

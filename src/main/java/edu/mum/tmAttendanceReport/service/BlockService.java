@@ -8,6 +8,9 @@ import edu.mum.tmAttendanceReport.entity.Block;
 import edu.mum.tmAttendanceReport.entity.Course;
 import edu.mum.tmAttendanceReport.entity.Student;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 
 public interface BlockService {
@@ -16,4 +19,6 @@ public interface BlockService {
 	public Block findById(Long id);
 	public List<Block> findByStartDateAfter(Date startDate);
 	public List<StudentReport> generateResult(List<Student> list, Block block);
+
+	boolean createExcel(List<StudentReport> studentReports, ServletContext context, HttpServletRequest request, HttpServletResponse response);
 }
